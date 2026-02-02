@@ -1,8 +1,14 @@
 
 #include "Arbre.hpp"
 
+Arbre::Arbre() : Vegetal(), mStrategie(std::make_unique<CroissanceConstante>(1.0f)) {}
 
-void Arbre::croissance() 
+void Arbre::setStrategieCroissance(std::unique_ptr<CroissanceStrategy> strategie) {
+    mStrategie = std::move(strategie);
+}
+
+void Arbre::croissance()
 {
-  setTaille(getTaille() + 1.0);
+    const float delta = mStrategie ? mStrategie->increment() : 1.f;
+    setTaille(getTaille() + delta);
 }

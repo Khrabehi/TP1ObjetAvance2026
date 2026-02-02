@@ -7,7 +7,8 @@ target_sources( base
 )
 
 target_include_directories( base
-  PUBLIC "." )
+  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+)
 
 add_executable( ${PROJECT_NAME}
                 main.cpp )
