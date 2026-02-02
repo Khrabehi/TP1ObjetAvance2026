@@ -24,6 +24,7 @@ target_link_libraries(
 add_executable(
   cpp_test
   class_modelisation_test.cpp
+  class_strategy_test.cpp
 )
 target_link_libraries(
   cpp_test

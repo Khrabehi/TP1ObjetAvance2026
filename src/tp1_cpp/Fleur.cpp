@@ -1,14 +1,14 @@
 
 #include "Fleur.hpp"
 
-#include <algorithm>
-
-Fleur::Fleur(double tailleMax)
-	: mTailleMax(tailleMax)
-{
-}
+Fleur::Fleur(float tailleMax)
+  : tailleMax(tailleMax)
+{}
 
 void Fleur::croissance()
 {
-	setTaille(std::min(mTailleMax, getTaille() + 0.1));
+  if (getTaille() + 0.1 > tailleMax) 
+    setTaille(tailleMax);
+  else
+    setTaille(getTaille() + 0.1);
 }
