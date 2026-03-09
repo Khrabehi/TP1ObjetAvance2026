@@ -1,5 +1,5 @@
-#include "Vegetal.hpp"
-#include "Champignon.hpp"
+#include "../Vegetal.hpp"
+#include "../Champignon.hpp"
 #include <memory>
 
 class ChampignonAdapter : public Vegetal {

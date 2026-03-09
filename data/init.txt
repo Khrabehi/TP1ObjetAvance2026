@@ -6,3 +6,5 @@ Arbre
 Fruit
 Arbre
 Arbre
+Champignon 1.5
+Champignon 2.5

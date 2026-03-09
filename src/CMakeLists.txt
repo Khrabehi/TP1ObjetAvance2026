@@ -15,6 +15,11 @@ target_sources( base
 	tp1_cpp/Terrain.cpp tp1_cpp/fabrique/FabriqueBase.cpp
 )
 
+target_sources( base
+  PRIVATE 
+    tp1_cpp/adapter/ChampignonAdapter.cpp
+)
+
 target_include_directories( base
   PUBLIC "." )
 
