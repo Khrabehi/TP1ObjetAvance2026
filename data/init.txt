@@ -1,0 +1,8 @@
+Arbre
+Fleur 0.4
+Fleur 0.8
+Fleur 0.2
+Arbre
+Fruit
+Arbre
+Arbre

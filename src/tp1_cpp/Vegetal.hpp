@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include <string>
+
 class Vegetal
 {
 	public:
@@ -9,6 +11,7 @@ class Vegetal
 		double getTaille() const;
 
 		virtual void croissance() = 0;
+		virtual std::string getType() const = 0;
 
 	protected:
 		void setTaille(double taille);
