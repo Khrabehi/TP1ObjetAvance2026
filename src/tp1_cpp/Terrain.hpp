@@ -2,6 +2,7 @@
 #pragma once
 
 #include "Vegetal.hpp"
+#include "visiteur/AffichageVisiteur.hpp"
 
 #include <memory>
 #include <vector>

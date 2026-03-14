@@ -1,5 +1,7 @@
 #include "ChampignonAdapter.hpp"
 
+#include "../visiteur/IVisiteur.hpp"
+
 ChampignonAdapter::ChampignonAdapter(std::unique_ptr<Champignon> vraiChampi)
     : champignon(std::move(vraiChampi))
 {
@@ -23,4 +25,9 @@ std::string ChampignonAdapter::getType() const {
 
 void ChampignonAdapter::setType(double taille) {
     setTaille(taille);
+}
+
+void ChampignonAdapter::accept(IVisiteur* visiteur)
+{
+    visiteur->visit(*this);
 }

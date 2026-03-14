@@ -1,6 +1,8 @@
 
 #include "Fleur.hpp"
 
+#include "visiteur/IVisiteur.hpp"
+
 #include <algorithm>
 #include <string>
 
@@ -17,4 +19,9 @@ void Fleur::croissance()
 std::string Fleur::getType() const
 {
 	return "Fleur";
+}
+
+void Fleur::accept(IVisiteur* visiteur)
+{
+	visiteur->visit(*this);
 }

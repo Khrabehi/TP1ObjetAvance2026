@@ -1,9 +1,6 @@
 
 #include "Arbre.hpp"
 
-#include "strategie/ICroissance.hpp"
-
-#include <string>
 
 void Arbre::croissance()
 {
@@ -18,6 +15,7 @@ void Arbre::croissance()
 	}
 }
 
+[[deprecated]]
 std::string Arbre::getType() const
 {
 	return "Arbre";
@@ -26,5 +24,10 @@ std::string Arbre::getType() const
 void Arbre::setStrategieCroissance(ICroissance* croissance)
 {
 	mStrategieCroissance = croissance;
+}
+
+void Arbre::accept(IVisiteur* visiteur)
+{
+	visiteur->visit(*this);
 }
 

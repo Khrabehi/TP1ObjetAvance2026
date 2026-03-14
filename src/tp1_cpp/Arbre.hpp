@@ -3,8 +3,9 @@
 
 #include "Vegetal.hpp"
 #include "strategie/IStratCroissance.hpp"
-
-class ICroissance;
+#include <string>
+#include "strategie/ICroissance.hpp"
+#include "visiteur/IVisiteur.hpp"
 
 class Arbre : public Vegetal, public IStratCroissance
 {
@@ -13,6 +14,7 @@ class Arbre : public Vegetal, public IStratCroissance
 		std::string getType() const override;
 
 		void setStrategieCroissance(ICroissance* croissance) override;
+		void accept(IVisiteur* visiteur) override;
 
 	private:
 		ICroissance* mStrategieCroissance = nullptr;

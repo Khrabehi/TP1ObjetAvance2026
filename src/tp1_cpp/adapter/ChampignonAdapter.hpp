@@ -14,6 +14,7 @@ public:
 
     void croissance(); 
     std::string getType() const;
+    void accept(IVisiteur* visiteur) override;
 
 protected:
     void setType(double taille);

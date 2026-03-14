@@ -41,11 +41,22 @@ void Terrain::setStrategieCroissance(ICroissance* croissance)
 
 void Terrain::afficher()
 {
+	/*
 	std::for_each(mVegetals.begin(), mVegetals.end(),
 			[](const std::unique_ptr<Vegetal>& vegetal)
 			{
 				std::cout << "\n\tMon " << vegetal->getType() << " fait : " << vegetal->getTaille() << std::endl;
 			});
+	*/
+
+	AffichageVisiteur affichageVisiteur;
+	std::for_each(mVegetals.begin(), mVegetals.end(),
+			[&affichageVisiteur](const std::unique_ptr<Vegetal>& vegetal)
+			{
+				vegetal->accept(&affichageVisiteur);
+				std::cout << "\n\t" << affichageVisiteur.getTypeAffiche() << std::endl;
+			});
+
 }
 
 void chargerFichier(Terrain& terrain, const std::string& path)
