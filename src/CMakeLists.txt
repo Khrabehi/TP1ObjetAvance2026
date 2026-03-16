@@ -25,6 +25,11 @@ target_sources( base
     tp1_cpp/visiteur/AffichageVisiteur.cpp
 )
 
+target_sources( base
+  PRIVATE
+    tp1_cpp/visiteur/SerializeVisiteur.cpp
+)
+
 target_include_directories( base
   PUBLIC "." )
 

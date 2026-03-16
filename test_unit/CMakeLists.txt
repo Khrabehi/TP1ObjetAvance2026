@@ -32,6 +32,18 @@ target_link_libraries(
     GTest::gtest_main
 )
 
+add_executable(
+  visiteur_test
+  visiteur_test.cpp
+)
+target_link_libraries(
+  visiteur_test
+  PRIVATE
+    base
+    GTest::gtest_main
+)
+
 include(GoogleTest)
 gtest_discover_tests(hello_test)
 gtest_discover_tests(cpp_test)
+gtest_discover_tests(visiteur_test)

@@ -33,6 +33,7 @@
 
 # Build directory
 build_*
+build/
 
 # Vscode settings
 .vscode/
